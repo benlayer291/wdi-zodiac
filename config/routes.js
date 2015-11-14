@@ -6,6 +6,11 @@ var signsController = require('../controllers/signsController');
 
 //ROUTE ACTIONS
 
+//ROOT
+router.get('/', function(req, res){
+  res.redirect('/signs');
+})
+
 //INDEX, CREATE
 router.route('/signs')
   .get(signsController.signsIndex)
