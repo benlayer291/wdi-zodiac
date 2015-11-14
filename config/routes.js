@@ -24,3 +24,5 @@ router.route('/signs/:id')
 //EDIT
 router.route('/signs/:id/edit')
   .get(signsController.signsEdit)
+
+module.exports = router;
