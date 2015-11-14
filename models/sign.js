@@ -9,4 +9,4 @@ var signSchema = new mongoose.Schema({
 
 var Sign = mongoose.model("Sign", signSchema);
 
-module.exports = Sign;
+module.exports = Sign
