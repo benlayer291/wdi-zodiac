@@ -57,7 +57,7 @@ function signsEdit(req, res) {
 
 //Delete
 function signsDelete(req, res) {
-  var signId = req.params.id:
+  var signId = req.params.id;
 
   Sign.remove({_id: signId}, function(err) {
     if (err) return res.render('error', { message: "Uh Oh! Something went wrong! " + err });
