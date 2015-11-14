@@ -14,14 +14,14 @@ var app = express();
 var routes = require('./config/routes.js');
 
 //DATABASE
-var databaseUrl = 'mongodb://localhost:27017/zodiac-app';
+var databaseUrl = process.env.MONGOLAB_URI || 'mongodb://localhost:27017/zodiac-app';
 mongoose.connect(databaseUrl);
 
 //MIDDLEWARE
 app.use(morgan('dev'));
-app.use(bodyParser.urlencoded( {extended: true}));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(methodOverride(function(req, res){
-  if(req.body && typeof req.body === 'object' && '_method' in req.body) {
+  if (req.body && typeof req.body === 'object' && '_method' in req.body) {
     var method = req.body._method;
     delete req.body._method;
     return method;
@@ -35,7 +35,7 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 
 //PORT
-app.listen(3000)
+app.listen(process.env.PORT || 3000);
 console.log("Express is listening to localhost:3000");
 
 
