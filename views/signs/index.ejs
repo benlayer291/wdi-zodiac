@@ -1,12 +1,11 @@
 <div class="container">
-  <div class="row">
+  <div class="row signs">
     <% signs.forEach(function(sign){ %>
-      <div class="four columns">
-        <ul>
-          <li><img class="sign-logo" src="<%= sign.image %>"></li>
-          <li><%= sign.name %></li>
-        </ul>
+    <div class="four columns sign">
+      <div class="sign-border">
+        <a href="signs/<%= sign.id %>"><img class="sign-logo" src="<%= sign.image %>"></a>
       </div>
+    </div>
     <% }); %>
   </div>
 </div>

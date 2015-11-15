@@ -1,10 +1,17 @@
+/*Statics*/
+
+body {
+  background: #424242; //#FAFAFA;
+}
+
 /*Navbar*/
 
 nav {
   height: 48px;
   line-height: 48px;
-  border-top: 1px solid #424242;
-  border-bottom: 1px solid #424242;
+  /*border-top: 3px solid #BDBDBD;*/
+  border-bottom: 3px solid #000; #BDBDBD;
+  background: #fff;
 }
 
 nav ul {
@@ -18,28 +25,134 @@ nav ul {
 nav ul li {
   display: inline;
   list-style-type: none;
-  margin: 0;
   padding: 0;
 }
 
 nav ul .logo a {
   color: #FFB300;
-  font-size: 32px;
+  margin: auto 30px;
+  font-size: 42px;
   font-weight: 200;
 }
 
 nav ul li a {
   text-decoration: none;
   color: #424242;
-  margin: 0 20px;
-  font-weight: 300;
- }
+  margin: auto 20px;
+  font-weight: 500;
+}
 
- nav ul li a:hover { 
-    color:#9E9E9E;
- }
+nav ul li a:hover { 
+  color: #BDBDBD;
+}
 
- nav ul .logo a:hover {
+nav ul .logo a:hover {
   color: #FFC107;
   text-shadow: 0px 0px 1px #FFC107;
- }
+}
+
+/*Signs index page*/
+
+.signs {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.sign {
+  text-align: center;
+}
+
+.sign-border {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  background: #fff;
+  border: 5px solid #FFC107;
+  box-shadow:0 0 10px #FFC107;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.sign-border:hover {
+  border: 5px solid #fff;
+  box-shadow:0 0 10px #fff;
+  background: #FFCA28; #FFC107;
+}
+
+.sign-border .sign-logo {
+  width: 100px;
+  margin: 10px;
+  position: absolute;
+  top: 25px;
+  left: 15px;
+}
+
+/*Signs show page*/
+
+.sign-border-show {
+  width: 150px;
+  height: 150px;
+  margin: 10px auto;
+  background: #fff;
+  border: 5px solid #FFC107;
+  box-shadow:0 0 10px #FFC107;
+  border-radius: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.sign-border-show .sign-logo {
+  width: 100px;
+  margin: 10px;
+  position: absolute;
+  top: 25px;
+  left: 15px;
+}
+
+.sign-info-img {
+  margin-top: 25px;
+}
+
+.sign-info-text {
+  margin-top: 25px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow:0 0 10px #fff;
+  text-align: center;
+}
+
+.sign-info-text ul {
+  margin: 0;
+  padding-top: 25px;
+}
+
+.sign-info-text ul li {
+  list-style-type: none;
+  font-weight: 300;
+}
+
+.sign-info-text p {
+  padding: 25px;
+  font-weight: 300;
+}
+
+.sign-tools {
+  text-align: center;
+  margin-top: 25px;
+}
+
+.sign-tools .button {
+  color: #424242;
+  background: #fff;
+  border: 2px solid #fff;
+  box-shadow:0 0 2px #fff;
+}
+
+.sign-tools .button:hover {
+  color: #BDBDBD;
+  background: #fff;
+  border: 2px solid #FFC107;
+  box-shadow:0 0 2px #FFC107;
+}
+
