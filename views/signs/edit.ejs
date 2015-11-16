@@ -1,0 +1,56 @@
+<!-- <form>
+  <div class="row">
+    <div class="six columns">
+      <label for="exampleEmailInput">Your email</label>
+      <input class="u-full-width" type="email" placeholder="test@mailbox.com" id="exampleEmailInput">
+    </div>
+    <div class="six columns">
+      <label for="exampleRecipientInput">Reason for contacting</label>
+      <select class="u-full-width" id="exampleRecipientInput">
+        <option value="Option 1">Questions</option>
+        <option value="Option 2">Admiration</option>
+        <option value="Option 3">Can I get your number?</option>
+      </select>
+    </div>
+  </div>
+  <label for="exampleMessage">Message</label>
+  <textarea class="u-full-width" placeholder="Hi Dave …" id="exampleMessage"></textarea>
+  <label class="example-send-yourself-copy">
+    <input type="checkbox">
+    <span class="label-body">Send a copy to yourself</span>
+  </label>
+  <input class="button-primary" type="submit" value="Submit">
+</form> -->
+
+<div class="container">
+  <div class="row">
+    <div class="offset-by-two eight columns sign-info-img">
+      <div class="sign-border-show">
+        <img class="sign-logo" src="<%= sign.image %>">
+      </div>
+    </div>
+  </div>
+  <div class="row sign-edit">
+    <form method="post" action="/signs/<%= sign.id %>">
+      <div class="row sign-general">
+        <div class="six columns">
+          <input type="hidden" name="_method" value="patch">
+          <input class="u-full-width" type="text" name="sign[name]" placeholder="Sign Name" value="<%= sign.name %>">
+        </div>
+        <div class="six columns">
+          <input class="u-full-width" type="text" name="sign[period]" placeholder="Sign Period" value="<%= sign.period %>">
+        </div>
+      </div>
+      <div class="row sign-description">
+        <div class="twelve columns">
+        <textarea class="u-full-width" name="sign[description]" placeholder="<%= sign.description %>"></textarea>
+        </div>
+      </div>
+      <div class="row sign-edit-tools">
+        <div class="twelve columns">
+          <input type="submit" class="button" value="UPDATE">
+        </div>
+      </div>
+    </form>
+  </div>
+</div>

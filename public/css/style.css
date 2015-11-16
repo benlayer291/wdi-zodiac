@@ -156,3 +156,35 @@ nav ul .logo a:hover {
   box-shadow:0 0 2px #FFC107;
 }
 
+/*Sign Edit form*/
+
+.sign-edit {
+  margin-top: 25px;
+}
+
+.sign-description {
+  margin-left: 2%;
+}
+
+.sign-description textarea{
+  height: 150px;
+}
+
+.sign-edit-tools {
+  text-align: center;
+}
+
+.sign-edit-tools .button {
+  color: #424242;
+  background: #fff;
+  border: 2px solid #fff;
+  box-shadow:0 0 2px #fff;
+}
+
+.sign-edit-tools .button:hover {
+  color: #BDBDBD;
+  background: #fff;
+  border: 2px solid #FFC107;
+  box-shadow:0 0 2px #FFC107;
+}
+

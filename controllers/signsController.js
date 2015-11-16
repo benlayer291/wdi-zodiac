@@ -49,7 +49,7 @@ function signsUpdate(req, res) {
 function signsEdit(req, res) {
   var signId = req.params.id;
 
-  Sign.findById({_id: id}, function(err, sign) {
+  Sign.findById({_id: signId}, function(err, sign) {
     if (err) return res.render('error', { message: "Uh Oh! Something went wrong! " + err });
     return res.render('signs/edit', { sign: sign });
   });
