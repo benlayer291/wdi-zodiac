@@ -1,11 +1,13 @@
 var mongoose = require('mongoose');
 
+var Sign = require('../models/sign');
+
 var hscopeSchema = new mongoose.Schema({
   created_at: Date,
   title: String,
   luckyNumbers: String,
   description: String,
-  sign_id: String
+  sign: Sign.schema
 })
 
 //method for generate six lucky lottery numbers with each horoscope

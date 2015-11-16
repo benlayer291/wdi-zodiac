@@ -1,0 +1,31 @@
+/*Scopes index page*/
+
+/*.scopes {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}*/
+
+.scope {
+  text-align: center;
+  color: #424242;
+  margin-top: 25px;
+  background: #fff;
+  border: 5px solid #FFC107;
+  box-shadow:0 0 10px #FFC107;
+  border-radius: 10px;
+}
+
+.scope:hover {
+  border: 5px solid #fff;
+  box-shadow:0 0 10px #fff;
+  background: #FFCA28; #FFC107;
+}
+
+.scope ul {
+  padding: 25px;
+  margin: none;
+}
+
+.scope ul li {
+  list-style-type: none;
+}

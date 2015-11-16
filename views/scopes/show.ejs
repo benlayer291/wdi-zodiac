@@ -1,0 +1,46 @@
+<div class="container">
+  <div class="row">
+    <div class="offset-by-two eight columns sign-info-img">
+      <div class="sign-border-show">
+        <img class="sign-logo" src="<%= sign.image %>">
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="offset-by-two eight columns sign-info-text">
+      <div class="row">
+        <div class="twelve columns">
+          <ul>
+            <li><h2><%= scope.title %></h2></li>
+            <li><h3><%= scope.created_at.getDate()%>/<%= scope.created_at.getMonth()%>/<%= scope.created_at.getFullYear()%></h3></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row">
+        <div class="twelve columns">
+          <p><%= scope.description %></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="offset-by-three six columns sign-tools">
+      <div class="four columns">
+        <a href="/scopes/<%=scope.id%>/edit" class="button">EDIT</a>
+      </div>
+      <div class="four columns">
+        <form method="post" action="/scopes/<%= scope.id %>">
+          <input type="hidden" name="_method" value="delete">
+          <button class="button">DELETE</button>
+        </form>
+      </div>
+      <div class="four columns">
+        <a href="/scopes" class="button">BACK</a>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+

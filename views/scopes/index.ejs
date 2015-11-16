@@ -1,15 +1,15 @@
 <div class="container">
-  <div class="row signs">
+  <div class="row scopes">
     <% scopes.forEach(function(scope){ %>
-    <div class="four columns sign">
-      <div class="sign-border">
+    <a href="/scopes/<%= scope.id %>">
+      <div class="six columns scope">
         <ul>
-          <li><%= scope.title %></li>
-          <li><%= scope.created_at %></li>
+          <li><h3><%= scope.title %></h3></li>
+          <li><%= scope.created_at.getDate()%>/<%= scope.created_at.getMonth()%>/<%= scope.created_at.getFullYear()%></li>
           <li><%= scope.description %></li>
         </ul>
       </div>
-    </div>
+    </a>
     <% }); %>
   </div>
 </div>

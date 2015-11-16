@@ -1,8 +1,9 @@
 var Hscope = require('../models/hscope');
+var Sign = require('../models/sign');
 
 //INDEX
 function scopesIndex(req, res) {
-  Sign.find({}, function(err, scopes){
+  Hscope.find({}, function(err, scopes){
     if (err) return res.render('error', { message: "Uh Oh! Something went wrong! " + err });
     return res.render('scopes/index', { scopes: scopes});
   });
@@ -11,10 +12,11 @@ function scopesIndex(req, res) {
 //SHOW
 function scopesShow(req, res) {
   var scopeId = req.params.id;
+  // var sign = Hscope.findById({ _id: scopeId });
 
-  Scope.findById({_id: scopeId }, function(err, scope){
+  Hscope.findById({_id: scopeId }, function(err, scope){
     if (err) return res.render('error', { message: "Uh Oh! Something went wrong! " + err });
-    return res.render('scope/show', { scope: scope });
+    return res.render('scopes/show', { scope: scope, sign: scope.sign });
   });
 }
 
@@ -37,9 +39,9 @@ function scopesNew(req, res) {
 //Update
 function scopesUpdate(req, res) {
   var scopeId = req.params.id;
-  var signInfo = req.body.hscope;
+  var scopeInfo = req.body.hscope;
 
-  Sign.findByIdAndUpdate({_id: scopeId}, scopeInfo, function(err){
+  Hscope.findByIdAndUpdate({_id: scopeId}, scopeInfo, function(err){
     if (err) return res.render('error', { message: "Uh Oh! Something went wrong! " + err });
     return res.redirect('/scopes');
   });
@@ -49,7 +51,7 @@ function scopesUpdate(req, res) {
 function scopesEdit(req, res) {
   var scopeId = req.params.id;
 
-  Scope.findById({_id: scopeId}, function(err, scope) {
+  Hscope.findById({_id: scopeId}, function(err, scope) {
     if (err) return res.render('error', { message: "Uh Oh! Something went wrong! " + err });
     return res.render('signs/edit', { scope: scope });
   });
@@ -59,7 +61,7 @@ function scopesEdit(req, res) {
 function scopesDelete(req, res) {
   var scopeId = req.params.id;
 
-  Scope.remove({_id: scopeId}, function(err) {
+  Hscope.remove({_id: scopeId}, function(err) {
     if (err) return res.render('error', { message: "Uh Oh! Something went wrong! " + err });
     return res.redirect('/scopes');
   });
