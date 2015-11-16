@@ -7,8 +7,8 @@ body {
 /*Navbar*/
 
 nav {
-  height: 48px;
-  line-height: 48px;
+  height: 57px;
+  line-height: 57px;
   /*border-top: 3px solid #BDBDBD;*/
   border-bottom: 3px solid #000; #BDBDBD;
   background: #fff;
@@ -30,7 +30,7 @@ nav ul li {
 
 nav ul .logo a {
   color: #FFB300;
-  margin: auto 30px;
+  margin: 0 30px;
   font-size: 42px;
   font-weight: 200;
 }

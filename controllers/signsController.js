@@ -29,7 +29,7 @@ function signsCreate(req, res) {
   });
 }
 
-//NEW
+//NEW-not required
 function signsNew(req, res) {
   res.render('signs/new');
 }

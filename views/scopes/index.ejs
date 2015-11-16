@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row signs">
+    <% scopes.forEach(function(scope){ %>
+    <div class="four columns sign">
+      <div class="sign-border">
+        <ul>
+          <li><%= scope.title %></li>
+          <li><%= scope.created_at %></li>
+          <li><%= scope.description %></li>
+        </ul>
+      </div>
+    </div>
+    <% }); %>
+  </div>
+</div>
